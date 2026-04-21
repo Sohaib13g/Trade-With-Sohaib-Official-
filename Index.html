@@ -1,28 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Trade With Sohaib</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade With Sohaib</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: black;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #111;
+}
+
+.logo {
+    color: gold;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: gold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero span {
+    color: gold;
+}
+
+.hero button {
+    background: gold;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background: gold;
+    color: black;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-content {
+    background: #111;
+    padding: 30px;
+    margin: 100px auto;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    color: gold;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Trade With Sohaib</h1>
-    <nav>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Trade With Sohaib</div>
+    <div class="nav-links">
         <a href="#">Home</a>
-        <a href="#">Market</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+        <a href="#">Markets</a>
+        <a href="#">Trade</a>
+        <a href="#">Login</a>
+    </div>
+</div>
 
-<section class="hero">
-    <h2>Welcome to Crypto World</h2>
-    <p>Start your trading journey today</p>
-    <button onclick="showMessage()">Start Trading</button>
-</section>
+<!-- Hero -->
+<div class="hero">
+    <h1>Welcome to <span>Trade With Sohaib</span></h1>
+    <p>Buy & Sell Crypto Easily</p>
+    <button onclick="showPopup()">Get Started</button>
+</div>
 
-<script src="script.js"></script>
+<!-- Cards -->
+<div class="cards">
+    <div class="card" onclick="showPopup()">Bitcoin</div>
+    <div class="card" onclick="showPopup()">Ethereum</div>
+    <div class="card" onclick="showPopup()">BNB</div>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">X</span>
+        <h2>Coming Soon</h2>
+        <p>Trading feature abhi ready nahi hai</p>
+    </div>
+</div>
+
+<script>
+function showPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
 </body>
-</html>
-
+    </html>
