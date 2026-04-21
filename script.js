@@ -6,5 +6,5 @@ functionGodzillatrading() {
 }
 
 function cardClick(coin) {
-    alert(coin + " selected!");
+    alert(https://whatsapp.com/channel/0029Va9BsJiCsU9MTWDfi03j!");
 }
