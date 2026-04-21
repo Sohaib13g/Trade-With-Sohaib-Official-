@@ -1,4 +1,4 @@
-function joinGodzillatrading() {
+functionGodzillatrading() {
     alert("Welcome Sohaib 🚀 Start your trading journey now!");
 }
 
